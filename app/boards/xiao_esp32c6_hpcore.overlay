@@ -1,0 +1,16 @@
+/ {
+    aliases {
+        low-water-led-status = &low_water;
+    };
+
+    status-led {
+		compatible = "gpio-leds";
+        
+        low_water: low_water {
+            gpios = <&gpio0 16 GPIO_ACTIVE_LOW>;
+			label = "low water indicator";
+
+        };
+
+    };
+};
